@@ -5,29 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rajesh Tota — System & Automation Engineer</title>
 
-  <!-- NOTE: Local uploaded files (workspace) -->
-  <!-- Photo: ./Rajesh.jpeg -->
-  <!-- Resume: ./Rajesh_Tota_Final.pdf -->
-
-  <!-- SEO + Preview -->
-  <meta name="description" content="System & Automation Engineer — Ansible, OpenShift, Event-Driven Ansible (EDA), DevOps, Prometheus, Loki Logging, 3scale API Management, AWS Cloud, Terraform, CI/CD automation." />
-  <meta name="keywords" content="Rajesh Tota, System Engineer, Automation Engineer, Ansible Automation, OpenShift, DevOps, EDA, Prometheus, Loki, 3scale, RHSSO, AWS, Terraform, CI/CD, Kubernetes" />
-  <meta name="author" content="Rajesh Tota" />
-
-  <!-- OpenGraph (uses local workspace path; replace for GitHub Pages as needed) -->
-  <meta property="og:title" content="Rajesh Tota — System & Automation Engineer" />
-  <meta property="og:description" content="Ansible | OpenShift | DevOps | Reliability | Observability | Automation Engineering" />
-  <meta property="og:image" content="./Rajesh.jpeg" />
-  <meta property="og:url" content="https://rajeshtota257.github.io/rajeshtotaProfile/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Rajesh Tota — System & Automation Engineer" />
-  <meta name="twitter:description" content="Ansible | OpenShift | DevOps | Reliability | Observability" />
-  <meta name="twitter:image" content="./Rajesh.jpeg" />
-
-  <!-- Tailwind (CDN quick preview) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- AOS Animations & Icons -->
@@ -36,19 +14,17 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    /* small fadeIn animation for modals */
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(6px);} to {opacity:1; transform: translateY(0);} }
     .animate-fadeIn { animation: fadeIn 220ms ease-out; }
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-200">
+<body class="bg-slate-50 text-slate-800">
 
   <!-- NAVBAR -->
   <header class="bg-blue-700 text-white sticky top-0 z-40 shadow">
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <div class="flex items-center gap-4">
-        <!-- Use workspace local path here; for GitHub replace with ./Rajesh.jpeg -->
         <img src="./Rajesh.jpeg" alt="Rajesh Tota" class="w-14 h-14 rounded-full ring-2 ring-white object-cover" />
         <div>
           <h1 class="text-xl font-semibold">Rajesh Tota</h1>
@@ -58,17 +34,15 @@
 
       <nav class="flex items-center gap-3">
         <a href="#about" class="px-4 py-2 bg-white text-blue-700 rounded-md font-medium shadow-sm">About</a>
-        <a href="#skills" class="px-4 py-2 text-white/90 hover:text-white">Skills</a>
-        <a href="#experience" class="px-4 py-2 text-white/90 hover:text-white">Experience</a>
-        <a href="#projects" class="px-4 py-2 text-white/90 hover:text-white">Projects</a>
-        <a href="#achievements" class="px-4 py-2 text-white/90 hover:text-white">Achievements</a>
-        <a href="#education" class="px-4 py-2 text-white/90 hover:text-white">Education</a>
-        <a href="#contact" class="px-4 py-2 text-white/90 hover:text-white">Contact</a>
-        <!-- Resume link uses workspace path; replace with relative path for GitHub Pages -->
+        <a href="#skills" class="px-4 py-2 text-white/80 hover:text-white">Skills</a>
+        <a href="#experience" class="px-4 py-2 text-white/80 hover:text-white">Experience</a>
+        <a href="#projects" class="px-4 py-2 text-white/80 hover:text-white">Projects</a>
+        <a href="#achievements" class="px-4 py-2 text-white/80 hover:text-white">Achievements</a>
+        <a href="#education" class="px-4 py-2 text-white/80 hover:text-white">Education</a>
+        <a href="#contact" class="px-4 py-2 text-white/80 hover:text-white">Contact</a>
         <a href="./Rajesh_Tota_Final.pdf" download class="ml-4 inline-block bg-white text-blue-700 px-4 py-2 rounded-md font-semibold">Download Resume</a>
       </nav>
 
-      <button id="themeToggle" class="px-4 py-2 bg-black/20 hover:bg-black/30 rounded-md">🌙</button>
     </div>
   </header>
 
@@ -81,7 +55,7 @@
         <span id="typedText"></span>
       </p>
 
-      <p class="mt-4 text-lg">System & Automation Engineer with 5+ years of hands-on experience in Ansible, OpenShift, Event-Driven Ansible (EDA), and DevOps workflows. I build automation that reduces manual toil, improves reliability, and integrates monitoring & logging to accelerate incident response.</p>
+      <p class="mt-4 text-lg">System & Automation Engineer with 5+ years of hands-on experience in Ansible, OpenShift, Event-Driven Ansible (EDA), and DevOps workflows.</p>
 
       <div class="mt-6 flex gap-3">
         <a href="#projects" class="px-5 py-3 bg-blue-700 text-white rounded-md shadow">View Projects</a>
@@ -91,7 +65,6 @@
 
     <aside class="flex justify-center md:justify-end">
       <div class="w-48 h-48 rounded-full overflow-hidden ring-4 ring-white shadow-lg">
-        <!-- Hero photo -->
         <img src="./Rajesh.jpeg" alt="Rajesh Tota" class="w-full h-full object-cover" />
       </div>
     </aside>
@@ -127,26 +100,25 @@
         <h4 class="font-semibold">Developer — TCS (Reserve Bank of India Project)</h4>
         <p class="text-sm text-slate-600">Aug 2022 — Present</p>
         <ul class="list-disc list-inside mt-3 space-y-2">
-          <li>Automated OpenShift daily activities using Ansible and playbooks.</li>
-          <li>Integrated EDA with Prometheus alerts to trigger automated remediation efforts (~40% reduction).</li>
-          <li>Configured Prometheus rules and Alertmanager; improved system reliability (~30%).</li>
-          <li>Installed & managed Loki for centralized logging; improved troubleshooting speed (~25%).</li>
-          <li>Managed 3scale API gateway & RHSSO for 15+ APIs.</li>
+          <li>Automated OpenShift daily activities using Ansible.</li>
+          <li>Integrated EDA with Prometheus alerts.</li>
+          <li>Installed & managed Loki for centralized logging.</li>
+          <li>Managed 3scale & RHSSO automation.</li>
         </ul>
       </div>
 
       <div class="p-6 bg-white rounded-lg shadow-sm border">
-        <h4 class="font-semibold">Analyst — Cyient Ltd. (Virgin Media Project)</h4>
+        <h4 class="font-semibold">Analyst — Cyient Ltd.</h4>
         <p class="text-sm text-slate-600">Nov 2019 — July 2022</p>
         <ul class="list-disc list-inside mt-3 space-y-2">
-          <li>Worked with AWS cloud resources like EC2, S3, VPC, IAM.</li>
-          <li>Created CI/CD pipelines in Jenkins; deployed Docker images.</li>
+          <li>Worked with AWS EC2, S3, VPC, IAM</li>
+          <li>Created CI/CD pipelines using Jenkins</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS (cards trigger modals) -->
+  <!-- PROJECTS -->
   <section id="projects" class="bg-white py-10" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-6">
       <h3 class="text-2xl font-semibold text-blue-700">Projects</h3>
@@ -154,17 +126,17 @@
 
         <article onclick="openModal('modal1')" class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <h4 class="font-semibold">EDA with Prometheus & Alertmanager</h4>
-          <p class="mt-2 text-sm text-slate-700">Automated incident remediation via Event-Driven Ansible rulebooks.</p>
+          <p class="mt-2 text-sm text-slate-700">Automated incident remediation workflows.</p>
         </article>
 
         <article onclick="openModal('modal2')" class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-          <h4 class="font-semibold">Loki Logging Stack Deployment</h4>
-          <p class="mt-2 text-sm text-slate-700">Centralized logging with routed SIEM forwarding.</p>
+          <h4 class="font-semibold">Loki Logging Stack</h4>
+          <p class="mt-2 text-sm text-slate-700">Centralized logging with SIEM integration.</p>
         </article>
 
         <article onclick="openModal('modal3')" class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-          <h4 class="font-semibold">3scale API Management & RHSSO</h4>
-          <p class="mt-2 text-sm text-slate-700">API lifecycle & identity access management automation.</p>
+          <h4 class="font-semibold">3scale API Management</h4>
+          <p class="mt-2 text-sm text-slate-700">API gateway & access automation.</p>
         </article>
 
       </div>
@@ -175,8 +147,8 @@
   <section id="achievements" class="max-w-6xl mx-auto py-10 px-6" data-aos="fade-up">
     <h3 class="text-2xl font-semibold text-blue-700">Achievements</h3>
     <ul class="mt-4 list-disc list-inside space-y-2">
-      <li>Received “On the Spot” Award three times at TCS.</li>
-      <li>Received “Most Valuable Performer” Award twice at Cyient Ltd.</li>
+      <li>On the Spot Award – TCS (x3)</li>
+      <li>MVP Award – Cyient (x2)</li>
     </ul>
   </section>
 
@@ -184,7 +156,7 @@
   <section id="education" class="bg-white py-10" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-6">
       <h3 class="text-2xl font-semibold text-blue-700">Education</h3>
-      <p class="mt-4">Bachelor of Engineering (EEE) — SBIT, Khammam, Telangana (May 2018)</p>
+      <p class="mt-4">Bachelor of Engineering (EEE) — SBIT, Khammam (2018)</p>
     </div>
   </section>
 
@@ -202,135 +174,42 @@
 
       <div class="p-6 bg-white border rounded-lg">
         <h4 class="font-semibold">Quick Summary</h4>
-        <p class="mt-2">System & Automation Engineer with expertise in automation, observability stacks, API management, and cloud deployments.</p>
+        <p class="mt-2">Automation | Observability | API | Cloud | CI/CD</p>
         <a href="./Rajesh_Tota_Final.pdf" download class="inline-block mt-4 px-4 py-2 bg-blue-700 text-white rounded-md">Download Resume</a>
       </div>
     </div>
   </section>
 
-  <!-- VISITOR COUNTER + FOOTER -->
+  <!-- FOOTER -->
   <footer class="bg-blue-700 text-white py-6 mt-8">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <p>© 2025 Rajesh Tota — System & Automation Engineer</p>
-
-      <div class="mt-4 text-sm opacity-80">
-        Visitors:
-        <img src="https://profile-counter.glitch.me/rajeshtota257/count.svg" alt="Visitor Counter" />
-      </div>
     </div>
   </footer>
 
   <!-- BACK TO TOP BUTTON -->
   <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800">▲</button>
 
-  <!-- MODALS (hidden by default) -->
-  <div id="modal1" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50">
-    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl max-w-lg shadow-xl animate-fadeIn">
-      <h3 class="text-xl font-bold text-blue-700">EDA with Prometheus & Alertmanager</h3>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li>• Event-Driven Ansible rulebooks triggered by Prometheus alerts</li>
-        <li>• Automated self-healing workflows reduce manual effort by ~40%</li>
-        <li>• Improved reliability and reduced MTTR</li>
-      </ul>
-      <div class="mt-4 flex gap-3 justify-end">
-        <a href="#" onclick="closeModal('modal1'); return false;" class="px-4 py-2 border rounded-md">Close</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal2" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50">
-    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl max-w-lg shadow-xl animate-fadeIn">
-      <h3 class="text-xl font-bold text-blue-700">Loki Logging Stack Deployment</h3>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li>• Installed & configured Loki, Promtail, Grafana</li>
-        <li>• Custom parsing rules & filtering</li>
-        <li>• Forwarded required logs to SIEM receivers for security monitoring</li>
-      </ul>
-      <div class="mt-4 flex gap-3 justify-end">
-        <a href="#" onclick="closeModal('modal2'); return false;" class="px-4 py-2 border rounded-md">Close</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal3" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50">
-    <div class="bg-white dark:bg-slate-800 p-6 rounded-xl max-w-lg shadow-xl animate-fadeIn">
-      <h3 class="text-xl font-bold text-blue-700">3scale API Management & RHSSO</h3>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li>• API lifecycle management & gateway policies</li>
-        <li>• RHSSO authentication & user provisioning</li>
-        <li>• Apicurio integration for Swagger edits</li>
-      </ul>
-      <div class="mt-4 flex gap-3 justify-end">
-        <a href="#" onclick="closeModal('modal3'); return false;" class="px-4 py-2 border rounded-md">Close</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- LIBRARIES & EFFECTS -->
+  <!-- LIBRARIES -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
-    // AOS init
     AOS.init({ duration: 900, once: true });
 
-    // Typed hero text (Option C)
     var typed = new Typed('#typedText', {
-      strings: ['Automation', 'Reliability', 'Observability', 'Cloud Engineering'],
+      strings: ['Automation', 'DevOps', 'Observability', 'OpenShift', 'Cloud Engineering'],
       typeSpeed: 60,
       backSpeed: 40,
       loop: true
     });
 
-    // Theme toggle
-    const toggle=document.getElementById('themeToggle');
-    toggle.addEventListener('click',()=>{
-      document.documentElement.classList.toggle('dark');
-      toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
-    });
-
-    // Back to top button
     const topBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) topBtn.classList.remove('hidden');
       else topBtn.classList.add('hidden');
     });
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // Modal functions
-    function openModal(id) {
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.classList.remove('hidden');
-      el.classList.add('flex');
-      // prevent body scroll when modal open
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal(id) {
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.classList.add('hidden');
-      el.classList.remove('flex');
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close modal on ESC
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape') {
-        ['modal1','modal2','modal3'].forEach(id => {
-          const el = document.getElementById(id);
-          if(el && !el.classList.contains('hidden')) closeModal(id);
-        });
-      }
-    });
-
-    // Close modal by clicking backdrop
-    ['modal1','modal2','modal3'].forEach(id=>{
-      const el = document.getElementById(id);
-      if(el) el.addEventListener('click', (ev)=>{
-        if(ev.target === el) closeModal(id);
-      });
-    });
   </script>
 
 </body>
