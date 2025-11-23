@@ -14,6 +14,22 @@
 
   <style>
     html { scroll-behavior: smooth; }
+
+    /* Navbar shrink animation on scroll */
+    .navbar.scrolled {
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      background-color: #0A3D62 !important;
+    }
+
+    /* Active link */
+    .active-link {
+      background: white !important;
+      color: #0A3D62 !important;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
     @keyframes fadeIn { from {opacity: 0; transform: translateY(6px);} to {opacity:1; transform: translateY(0);} }
     .animate-fadeIn { animation: fadeIn 220ms ease-out; }
   </style>
@@ -22,8 +38,10 @@
 <body class="bg-slate-50 text-slate-800">
 
   <!-- NAVBAR -->
-  <header class="bg-blue-700 text-white sticky top-0 z-40 shadow">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+  <header id="navbar" class="bg-blue-700 text-white sticky top-0 z-50 shadow transition-all duration-300">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4 md:px-6">
+      
+      <!-- Logo -->
       <div class="flex items-center gap-4">
         <img src="./Rajesh.jpeg" alt="Rajesh Tota" class="w-14 h-14 rounded-full ring-2 ring-white object-cover" />
         <div>
@@ -32,17 +50,33 @@
         </div>
       </div>
 
-      <nav class="flex items-center gap-3">
-        <a href="#about" class="px-4 py-2 bg-white text-blue-700 rounded-md font-medium shadow-sm">About</a>
-        <a href="#skills" class="px-4 py-2 text-white/80 hover:text-white">Skills</a>
-        <a href="#experience" class="px-4 py-2 text-white/80 hover:text-white">Experience</a>
-        <a href="#projects" class="px-4 py-2 text-white/80 hover:text-white">Projects</a>
-        <a href="#achievements" class="px-4 py-2 text-white/80 hover:text-white">Achievements</a>
-        <a href="#education" class="px-4 py-2 text-white/80 hover:text-white">Education</a>
-        <a href="#contact" class="px-4 py-2 text-white/80 hover:text-white">Contact</a>
+      <!-- Hamburger -->
+      <button id="menuBtn" class="md:hidden text-3xl">
+        <i class="ph-list"></i>
+      </button>
+
+      <!-- MENU -->
+      <nav id="menuList" class="hidden md:flex items-center gap-3">
+        <a href="#about" class="nav-link px-4 py-2">About</a>
+        <a href="#skills" class="nav-link px-4 py-2">Skills</a>
+        <a href="#experience" class="nav-link px-4 py-2">Experience</a>
+        <a href="#projects" class="nav-link px-4 py-2">Projects</a>
+        <a href="#achievements" class="nav-link px-4 py-2">Achievements</a>
+        <a href="#education" class="nav-link px-4 py-2">Education</a>
+        <a href="#contact" class="nav-link px-4 py-2">Contact</a>
         <a href="./Rajesh_Tota_Final.pdf" download class="ml-4 inline-block bg-white text-blue-700 px-4 py-2 rounded-md font-semibold">Download Resume</a>
       </nav>
+    </div>
 
+    <!-- MOBILE DROPDOWN -->
+    <div id="mobileMenu" class="hidden flex-col bg-blue-700 text-white md:hidden px-6 pb-4 space-y-2">
+      <a href="#about" class="nav-link block">About</a>
+      <a href="#skills" class="nav-link block">Skills</a>
+      <a href="#experience" class="nav-link block">Experience</a>
+      <a href="#projects" class="nav-link block">Projects</a>
+      <a href="#achievements" class="nav-link block">Achievements</a>
+      <a href="#education" class="nav-link block">Education</a>
+      <a href="#contact" class="nav-link block">Contact</a>
     </div>
   </header>
 
@@ -124,17 +158,17 @@
       <h3 class="text-2xl font-semibold text-blue-700">Projects</h3>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
 
-        <article onclick="openModal('modal1')" class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <article class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <h4 class="font-semibold">EDA with Prometheus & Alertmanager</h4>
           <p class="mt-2 text-sm text-slate-700">Automated incident remediation workflows.</p>
         </article>
 
-        <article onclick="openModal('modal2')" class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <article class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <h4 class="font-semibold">Loki Logging Stack</h4>
           <p class="mt-2 text-sm text-slate-700">Centralized logging with SIEM integration.</p>
         </article>
 
-        <article onclick="openModal('modal3')" class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <article class="cursor-pointer p-5 border rounded-lg bg-slate-50 hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <h4 class="font-semibold">3scale API Management</h4>
           <p class="mt-2 text-sm text-slate-700">API gateway & access automation.</p>
         </article>
@@ -204,14 +238,42 @@
       loop: true
     });
 
-    const topBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) topBtn.classList.remove('hidden');
-      else topBtn.classList.add('hidden');
+    // Navbar Scroll shrink
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
     });
-    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+    // Active link highlight on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        if (pageYOffset >= top - 120) current = section.getAttribute("id");
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === "#" + current) link.classList.add("active-link");
+      });
+    });
+
+    // Back to Top button
+    const topBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) topBtn.classList.remove("hidden");
+      else topBtn.classList.add("hidden");
+    });
+    topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   </script>
 
 </body>
 </html>
-
